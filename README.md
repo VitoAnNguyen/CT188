@@ -1,2 +1,1 @@
-# CT188
-Đồ án, bài tập lớn
+Let's get started

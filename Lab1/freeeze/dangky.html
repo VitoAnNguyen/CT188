@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký</title>
+    <link rel="icon" href="/ct188/Lab1/images/favicon.ico">
+</head>
+<body>
+    <header>
+            <a href="trangchu.html" target="_blank" ><img src="/ct188/Lab1/images/logo.png" alt="Freeeze" id="logo"></a>
+            <p></p>
+            <nav style="text-align: center;">
+                <a href="trangchu.html">Trang Chủ</a> |
+                <a href="gioithieu.html">Giới Thiệu</a> |
+                <a href="sanpham.html">Sản Phẩm</a> |
+                <a href="tintuc.html">Tin Tức</a> |
+                <a href="dangnhap.html">Đăng Nhập</a> |
+                <a href="dangky.html" target="_blank">Đăng Ký</a> |
+                <a href="lienhe.html">Liên Hệ</a> 
+            </nav>
+    </header>
+    <main>
+        <fieldset>
+            <form action="#" method="post" enctype="multipart/form-data">
+                <legend><b>ĐĂNG KÝ</b></legend>
+                <table cellpadding="5">
+                    <tr>
+                        <td><label for="email"><b>Email</b></label></td>
+                        <td><input type="text" name="email" id="email" placeholder="Vui lòng nhập email" size="30"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="psw"><b>Mật Khẩu</b></label></td>
+                        <td><input type="password" name="psw" id="psw" placeholder="Vui lòng nhập mật khẩu" size="30"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="psw2"><b>Nhập lại mật khẩu</b></label></td>
+                        <td><input type="password" name="psw2" id="psw2" placeholder="Vui lòng nhập mật khẩu" size="30"></td>
+                    </tr>
+
+                    <tr>
+                        <td><b>Cấp độ thành viên</b></td>
+                        <td>
+                            <input type="radio" name="memberType" id="bac" value="bac" checked> <label for="bac">Bạc</label>
+                            <input type="radio" name="memberType" id="vang" value="vang"> <label for="vang">Vàng</label>
+                            <input type="radio" name="memberType" id="bachkim" value="bachkim"> <label for="bachkim">Bạch Kim</label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><b>Ảnh đại diện</b></td>
+                        <td><input type="file" name="avatar" id="avatar"></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            Thông qua việc tạo tài khoản, bạn đồng ý với <a href="#">Điều khoản & Quyền riêng tư của chúng tôi</a>.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <input type="reset" value="Hủy">
+                            <input type="submit" value="Đăng ký">
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+            <p style="text-align: center;">
+                © 2026 - Bản quyền thuộc về VitoAnNguyen. 
+                <a href="https://facebook.com">Facebook</a> | 
+                <a href="https://twitter.com">Twitter</a> | 
+                <a href="https://pinterest.com">Pinterest</a> |
+                <a href="#logo">Về Đầu Trang</a>
+            </p>
+    </footer>
+</body>
+</html>

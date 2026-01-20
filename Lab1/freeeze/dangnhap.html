@@ -1,5 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+    <style>
+        .row{
+            font-weight: bold;
+        }
+        row:after {
+            content: "";
+            display: table;
+            clear:both;
+        }
+        .col-25{
+            float:left;
+            width: 25%;
+            margin-top: 5px;
+        }
+
+        .col-75{
+            float: right;
+            width: 75%;
+            margin-top:5px;
+        }
+        .auto{
+            margin: auto;
+        }
+
+    </style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,46 +49,40 @@
         <fieldset>
             <form action="#" method="post" enctype="application/x-www-form-urlencoded">
             <legend><b>ĐĂNG NHẬP</b></legend>
-            <table border="0" align="center">
-                <tr>
-                    <td colspan="1" align="justify">
-                        <img src="/CT188/Lab1/images/dangnhap/userlogin.png" alt="dangnhap"width="200">
-                    </td>
-                </tr>
-                <tr>
-                    <td><label for="email">Email:</label></td>
-                    <td>
-                        <input type="text" name="email" id="email" placeholder="Nhập email">
-                    </td>
-                </tr>
+            
+                <div class="row">
+                    <img src="/CT188/Lab1/images/dangnhap/userlogin.png" alt="login" width="200" >
+                <div class="row">
+                    <div class="col-25">
+                        <label for="email">Email</label>
+                    </div>
+                        
+                    <div class="col-75">
+                        <input type="email" id="email" name="email" placeholder="Nhập email">
+                    </div>
+                </div>
 
-                <tr>
-                    <td><label for="mk">Mật khẩu:</label></td>
-                    <td>
-                        <input type="text" name="mk" id="mk" placeholder="Nhập mật khẩu">
-                    </td>
-                </tr>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="matkhau">Mật khẩu</label>
+                    </div>
+                        
+                    <div class="col-75">
+                        <input type="mk" id="mk" name="mk" placeholder="Nhập mật khẩu">
+                    </div>
+                </div>
+                <div class="row">
+                        <div class="auto">
+                    <input type="submit" id="dangnhap" name="dangnhap" value="Đăng nhập">
+                    <input type="reset" id="huy" name="huy" value="Hủy">
+                        </div>
+                </div>
+                <div class="row">
+                    <p>Bạn quên <span><a href="llmk.html"> Mật Khẩu?</a>
+                    </span><input type="checkbox" name="remember">Ghi nhớ cho lần đăng nhập sau</p>
+                </div>
 
-                <tr>
-                        <td colspan="2" align="center">
-                            <input type="submit" value="Đăng Nhập">
-                            <input type="reset" value="Hủy">
-                        </td>
-                </tr>
 
-                <tr>
-                        <td colspan="2">
-                            <input type="checkbox" name="nho" id="nho">
-                            <label for="nho">Ghi nhớ cho lần đăng nhập sau</label>
-                        </td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <p>Bạn quên <span><a href="llmk.html"> Mật Khẩu?</a> Bạn chưa có tài khoản? <span><a href="dangky.html"> Đăng Ký </a> </span></p>
-                    </td>
-                </tr>
-
-            </table>
         </fieldset>
     </form>
 </main>

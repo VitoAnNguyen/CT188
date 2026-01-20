@@ -1,5 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+    <style>
+        .row{
+            font-weight: bold;
+        }
+        row:after {
+            content: "";
+            display: table;
+            clear:both;
+        }
+        .col-25{
+            float:left;
+            width: 25%;
+            margin-top: 5px;
+        }
+
+        .col-75{
+            float: right;
+            width: 75%;
+            margin-top:5px;
+        }
+
+    </style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,52 +43,74 @@
             </nav>
     </header>
     <main>
+        <form action="#" method="post" enctype="multipart/form-data">
         <fieldset>
-            <form action="#" method="post" enctype="multipart/form-data">
-                <legend><b>ĐĂNG KÝ</b></legend>
-                <table cellpadding="5">
-                    <tr>
-                        <td><label for="email"><b>Email</b></label></td>
-                        <td><input type="text" name="email" id="email" placeholder="Vui lòng nhập email" size="30"></td>
-                    </tr>
+            <legend><b>ĐĂNG KÝ</b></legend>
+            <div class="dangky">
+                <form action="action_page.php">
+                    <div class="row">
+                        <div class="col-25">
+                          <label for="email">Email</label>
+                        </div>
+                        <div class="col-75">
+                          <input type="text" id="email" name="email" placeholder="Vui lòng nhập email">
+                        </div>
+                      </div>
 
-                    <tr>
-                        <td><label for="psw"><b>Mật Khẩu</b></label></td>
-                        <td><input type="password" name="psw" id="psw" placeholder="Vui lòng nhập mật khẩu" size="30"></td>
-                    </tr>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="mk">Mật Khẩu</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="mk" name="matkhau" placeholder="Vui lòng nhập mật Khẩu">
+                        </div>
+                    </div>
 
-                    <tr>
-                        <td><label for="psw2"><b>Nhập lại mật khẩu</b></label></td>
-                        <td><input type="password" name="psw2" id="psw2" placeholder="Vui lòng nhập mật khẩu" size="30"></td>
-                    </tr>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="nlmk">Nhập lại mật khẩu</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="nlmk" name="nlmk" placeholder="Vui lòng nhập mật khẩu">
+                        </div>
+                    </div>
 
-                    <tr>
-                        <td><b>Cấp độ thành viên</b></td>
-                        <td>
-                            <input type="radio" name="memberType" id="bac" value="bac" checked> <label for="bac">Bạc</label>
-                            <input type="radio" name="memberType" id="vang" value="vang"> <label for="vang">Vàng</label>
-                            <input type="radio" name="memberType" id="bachkim" value="bachkim"> <label for="bachkim">Bạch Kim</label>
-                        </td>
-                    </tr>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="capdo">Cấp độ thành viên</label>
+                        </div>
 
-                    <tr>
-                        <td><b>Ảnh đại diện</b></td>
-                        <td><input type="file" name="avatar" id="avatar"></td>
-                    </tr>
+                        <div class="col-75">
+                            <input type="radio" name="capdo" id="bac" value="bac" checked> 
+                                <label for="bac">Bạc</label>
 
-                    <tr>
-                        <td colspan="2">
-                            Thông qua việc tạo tài khoản, bạn đồng ý với <a href="#">Điều khoản & Quyền riêng tư của chúng tôi</a>.
-                        </td>
-                    </tr>
+                            <input type="radio" name="capdo" id="vang" value="vang"> 
+                                <label for="vang">Vàng</label>
 
-                    <tr>
-                        <td colspan="2">
-                            <input type="reset" value="Hủy">
-                            <input type="submit" value="Đăng ký">
-                        </td>
-                    </tr>
-                </table>
+                            <input type="radio" name="capdo" id="bachkim" value="bachkim"> 
+                                <label for="bachkim">Bạch Kim</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="avt">Ảnh đại diện</label>
+                        </div>
+                        <div>
+                            <input type="file" name="avt" id="avt">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        Thông qua việc tạo tài khoản, bạn đồng ý với <a href="#">Điều khoản & Quyền riêng tư của chúng tôi</a>.
+                    </div>
+
+                    <div class="row">
+                        <input type="reset" name="huy" id="huy" value="Hủy">
+                        <input type="submit" name="đk" id="dk" value="Đăng ký"> 
+                    </div>
+                </form>
+              </div>
             </fieldset>
         </form>
     </main>

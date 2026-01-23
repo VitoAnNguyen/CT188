@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+    <style>
+        .row{
+            font-weight: bold;
+        }
+        row:after {
+            content: "";
+            display: table;
+            clear:both;
+        }
+        .col-25{
+            float:left;
+            width: 25%;
+            margin-top: 5px;
+        }
+
+        .col-75{
+            float: right;
+            width: 75%;
+            margin-top:5px;
+        }
+        .auto{
+            margin: auto;
+        }
+    </style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liên Hệ</title>
-    <link rel="icon" href="/CT188/Lab1/images/favicon.ico">
+    <link rel="icon" href="/ct188/Lab1/images/favicon.ico">
 </head>
 <body>
     <header>
-            <a href="trangchu.html" target="_blank" ><img src="/CT188/Lab1/images/logo.png" alt="Freeeze" id="logo"></a>
+            <a href="trangchu.html" target="_blank" ><img src="/ct188/Lab1/images/logo.png" alt="Freeeze" id="logo"></a>
             <p></p>
             <nav style="text-align: center;">
                 <a href="trangchu.html">Trang Chủ</a> |
@@ -22,53 +46,63 @@
     </header>
     <main>
         <h1>Liên hệ</h1>
-        <img src="/CT188/Lab1/images/lienhe/check-in.png" alt="Vị trí" width="100">
+        <img src="/ct188/Lab1/images/lienhe/check-in.png" alt="Vị trí" width="100">
         
         <h1>Địa chỉ: 0123, Tòa Nhà ABC, TP. Cần Thơ</h1>
         <p>Nếu bạn có góp ý, vui lòng liên hệ bằng thư điện tử hoặc sử dụng biểu mẫu bên dưới. Xin cảm ơn.</p>
 
         <form action="#" method="post" enctype="application/x-www-form-urlencoded">
             <fieldset>
-                <legend>Góp ý</legend>
-                <table border="0">
-                    <tr>
-                        <td><label for="fullname">Họ Tên:</label></td>
-                        <td><input type="text" id="fullname" name="fullname" placeholder="Vui lòng nhập họ tên của bạn" size="30"></td>
-                    </tr>
+            <legend>Góp ý</legend>
+            <form action="action_page.php">
+                <div class="row">
+                    <div class="col-25">
+                        <label for="hoten" name="hoten" id="hoten">Họ Tên:</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="hoten" name="hoten" placeholder="Vui lòng nhập Họ tên của bạn">
+                    </div>
+                </div>
 
-                    <tr>
-                        <td><label for="email_lh">Email:</label></td>
-                        <td><input type="text" id="email_lh" name="email_lh" placeholder="Vui lòng nhập địa chỉ email" size="30"></td>
-                    </tr>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="email" name="email" id="email">Email:</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="email" id="email" name="email" placeholder="Vui lòng nhập địa chỉ email">
+                    </div>
+                </div>
 
-                    <tr>
-                        <td><label for="topic">Chủ đề:</label></td>
-                        <td>
-                            <select id="topic" name="topic" size="1">
-                                <option value="sp">Về Sản phẩm/ Dịch vụ</option>
-                                <option value="ud">Về Ưu đãi thành viên</option>
-                                <option value="td">Về Tin Tuyển Dụng</option>
-                            </select>
-                        </td>
-                    </tr>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="chude" name="chude" id="chude">Chủ đề:</label>
+                    </div>
+                    <div class="col-75">
+                        <select id="op" name="op">
+                            <option value="spdv">Về Sản Phẩm/Dịch Vụ</option>
+                            <option value="udtv">Về Ưu Đãi Thành Viên</option>
+                            <option value="td">Về Tin Tuyển dụng</option>
+                        </select>
+                    </div>
+                </div>
 
-                    <tr>
-                        <td colspan="2"><label for="content">Nội dung:</label></td>
-                    </tr>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="Nội Dung" id="nd">Nội Dung:</label>
+                    </div>
 
-                    <tr>
-                        <td colspan="2">
-                            <textarea id="content" name="content" rows="7" cols="50" placeholder="Nội dung cần liên hệ"></textarea>
-                        </td>
-                    </tr>
+                    <div class="col-100">
+                        <textarea id="nd" name="nd" placeholder="Nội dung cần liên hệ"></textarea>
+                    </div>
 
-                    <tr>
-                        <td colspan="2" align="center">
-                            <input type="submit" value="Gửi">
-                        </td>
-                    </tr>
-                </table>
-            </fieldset>
+                </div>
+                <div class="row">
+                        <div class="auto">
+                    <input type="submit" id="gui" name="gui" value="Gửi">
+                        </div>
+                </div>
+            
+            </form>
         </form>
     </main>
     <footer>
